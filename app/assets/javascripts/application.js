@@ -10,10 +10,13 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
 
 // VENDORED
 //= require jquery
 //= require underscore
 //= require backbone
 //= require marionette
+
+
+//= BACKBONE
+//= require our_journey
