@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151020061023) do
+ActiveRecord::Schema.define(version: 20151021033500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,13 +50,23 @@ ActiveRecord::Schema.define(version: 20151020061023) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "comments", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "upvotes",    default: 0
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "moods", force: :cascade do |t|
   end
 
   create_table "posts", force: :cascade do |t|
-    t.integer "user_id"
+    t.integer  "user_id"
+    t.text     "content"
+    t.integer  "supports",   default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "supports", force: :cascade do |t|

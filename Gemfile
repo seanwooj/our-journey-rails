@@ -7,6 +7,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
+gem 'ejs'
 
 gem 'bower-rails', '~> 0.10.0'
 
