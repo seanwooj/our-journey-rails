@@ -5,7 +5,9 @@ var OurJourney = window.OurJourney || {};
 
   OurJourney.Models.Post = Backbone.Model.extend({
     modelName: 'Post',
-    url: '/api/posts',
+    url: function() {
+      return 'api/posts/' + this.id;
+    },
 
     initialize: function () {
       console.log('i fucking happened');
