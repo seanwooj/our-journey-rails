@@ -1,7 +1,7 @@
 var OurJourney = window.OurJourney || {};
 
 (function(){
-  OurJourney.Comments = Backbone.Collection.extend({
+  OurJourney.Collections.Comments = Backbone.Collection.extend({
 
     initialize: function (models, options) {
       this.post = options.post;
