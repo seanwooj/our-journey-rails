@@ -4,12 +4,10 @@ window.OurJourney = {
   Views: {},
   Routers: {},
 
-  initialize: function () {
+  initialize: function (data) {
     //  start listening to changes in the location bar (again, which we probably won't need)
+    var posts = new OurJourney.Collections.Posts(data.posts);
+    new OurJourney.Routers.Posts({posts : posts});
     Backbone.history.start();
   }
 }
-
-
-// Initialize upon page load using the jQuery shortcut
-$(OurJourney.initialize)
