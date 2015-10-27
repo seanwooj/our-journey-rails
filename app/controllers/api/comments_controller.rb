@@ -1,12 +1,16 @@
 class Api::CommentsController < ApplicationController
+  respond_to :json
+
   def index
     @comments = Comment.where(:post_id => params[:post_id])
 
-    render 'comments/index'
+    respond_with(@comments)
   end
 
   def show
     @comment = Comment.find(params[:id])
+
+    respond_with(@comment)
   end
 
   def destroy

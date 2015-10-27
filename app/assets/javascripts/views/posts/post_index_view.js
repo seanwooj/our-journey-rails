@@ -12,7 +12,7 @@ var OurJourney = window.OurJourney || {};
   });
 
   // move this to its own file
-  OurJourney.Views.PostView = Backbone.MarionetteItemView.extend({
-    template: JST['post.jst.ejs']
+  OurJourney.Views.PostView = Backbone.Marionette.ItemView.extend({
+    template: JST['post/post.jst.ejs']
   });
 })();
